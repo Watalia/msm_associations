@@ -99,7 +99,7 @@
         </label>
 
 
-        <input type="text" id="director_id" name="director_id" placeholder="Director" class="form-control" value="<%= @movie.director_id %>">
+        <input type="text" id="director_id" name="director_id" placeholder="Director" class="form-control" value="<%= Director.find_by(:id=>@movie.director_id).name %>">
 
       </div>
 
