@@ -26,13 +26,17 @@
       <% @directors.each do |director| %>
       <tr>
 
+
+        <td>
+
+          <img src="<%=director.image_url%>"/>
+
+        </td>
         <td><%= director.name %></td>
 
         <td><%= director.dob %></td>
 
-        <td><%= director.bio %></td>
-
-        <td><%= director.image_url %></td>
+      
 
         <td>
 
