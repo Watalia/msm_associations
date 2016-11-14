@@ -7,8 +7,7 @@ class CharactersController < ApplicationController
 
   def show
     @character = Character.find(params[:id])
-
-    render("characters/show.html.erb")
+      render("characters/show.html.erb")
   end
 
   def new
@@ -19,7 +18,6 @@ class CharactersController < ApplicationController
 
   def create
     @character = Character.new
-
 
     @character.movie_id = params[:movie_id]
 

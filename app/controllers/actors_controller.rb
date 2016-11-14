@@ -29,8 +29,6 @@ class ActorsController < ApplicationController
 
     @actor.image_url = params[:image_url]
 
-
-
     save_status = @actor.save
 
     if save_status == true

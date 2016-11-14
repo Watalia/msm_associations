@@ -22,8 +22,8 @@
       <dd><%= @movie.description %></dd>
 
 
-      <dt>Image url</dt>
-      <dd><%= @movie.image_url %></dd>
+      <dt>Image</dt>
+      <dd><img src="<%=@movie.image_url%>" height="110px"></dd>
 
 
       <dt>Director</dt>
@@ -33,6 +33,18 @@
       </a>
       </dd>
 
+      <dt>Cast</dt>
+<dd>
+      <ul>
+        <%  Character.where(:movie_id=>@movie.id).each do |character|%>
+        <li> <a href = "/actors/<%=character.actor_id%>">
+            <%= Actor.where(:actor_id=>@character.actor_id)%> </a>
+            (<%=character.name%>)</li>
+
+        <% end %>
+      </ul>
+
+  </dd>
 
     </dl>
 
